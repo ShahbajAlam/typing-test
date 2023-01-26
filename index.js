@@ -54,13 +54,21 @@ startBtnEl.addEventListener("click", () => {
             timeTakenEl.textContent = timeTaken;
         }, 1000);
     } else if (startBtnEl.textContent === "END TEST") {
-        userInputEl.disabled = true;
-        startBtnEl.textContent = "RESET";
-        clearInterval(timerID);
-        resultCardEl.classList.remove("hidden");
-        resultTimeEL.textContent = timeTaken;
-        resultMistakesEL.textContent = numberOfMistakes;
-        resultWpmEl.textContent = calculateResult();
+        if (quoteArray.length !== userInputArray.length) {
+            document.querySelector(".complete").style.top = "5%";
+            setTimeout(() => {
+                document.querySelector(".complete").style.top = "-100%";
+            }, 2000);
+            userInputEl.focus();
+        } else {
+            userInputEl.disabled = true;
+            startBtnEl.textContent = "RESET";
+            clearInterval(timerID);
+            resultCardEl.classList.remove("hidden");
+            resultTimeEL.textContent = timeTaken;
+            resultMistakesEL.textContent = numberOfMistakes;
+            resultWpmEl.textContent = calculateResult();
+        }
     } else if (startBtnEl.textContent === "RESET") {
         startBtnEl.textContent = "START TYPING";
         reset();
