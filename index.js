@@ -101,7 +101,7 @@ userInputEl.addEventListener("input", (e) => {
 
 window.addEventListener("load", getRandomQuote);
 
-/*const query = window.matchMedia("(min-width: 992px)");
+const query = window.matchMedia("(min-width: 992px)");
 if (!query.matches) {
     document.body.innerHTML = "";
     document.body.style.backgroundColor = "#f0f9ff";
@@ -111,4 +111,4 @@ if (!query.matches) {
             <h1>😒😒😒</h1>
        </div>
     `;
-}*/
+}
