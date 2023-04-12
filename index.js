@@ -107,7 +107,7 @@ if (!query.matches) {
     document.body.style.backgroundColor = "#f0f9ff";
     document.body.innerHTML = `
        <div class="error">
-            <h1>This is supposed to be opened in desktop devices</h1>
+            <h1>Please open in desktop devices</h1>
             <h1>😊😊😊</h1>
        </div>
     `;
